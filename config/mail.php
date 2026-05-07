@@ -72,6 +72,9 @@ return [
             'transport' => 'resend',
         ],
 
+        // Resend package reads RESEND_API_KEY from its own config (config/resend.php)
+        // published via: php artisan vendor:publish --provider="Resend\Laravel\ResendServiceProvider"
+
         'sendmail' => [
             'transport' => 'sendmail',
             'path' => env('MAIL_SENDMAIL_PATH', '/usr/sbin/sendmail -bs -i'),
